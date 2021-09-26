@@ -1,9 +1,10 @@
 import React from 'react'
+import { BlockMasterRouter } from './router/BlockMasterRouter'
 
 export const BlockMasterApp = () => {
   return (
     <>
-      <h1>Block Master App</h1>
+      <BlockMasterRouter />
     </>
   )
 }
