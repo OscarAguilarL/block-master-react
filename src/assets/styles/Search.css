@@ -1,0 +1,32 @@
+.searchForm {
+  outline: 3px solid var(--primary);
+  display: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .searchForm {
+    flex: 2;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  .search {
+    border: none;
+    color: var(--black);
+    font: var(--body2-regular);
+    padding: 0.75rem;
+    display: flex;
+    inline-size: 100%;
+  }
+
+  .form-button {
+    inline-size: 4rem;
+    border: none;
+    color: var(--black);
+    font-size: 1.25rem;
+    background-color: var(--primary);
+  }
+}

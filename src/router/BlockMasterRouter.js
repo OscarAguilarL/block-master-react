@@ -4,14 +4,14 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { AllMoviesPage } from '../pages/AllMoviesPage'
 import { LessValuedMoviesPage } from '../pages/LessValuedMoviesPage'
 import { MostValuedMoviesPage } from '../pages/MostValuedMoviesPage'
-import { Navbar } from '../components/Navbar'
 import { Wrapper } from '../components/Wrapper'
+import { Header } from '../components/Header'
 
 export const BlockMasterRouter = () => {
   return (
     <BrowserRouter>
       <Wrapper>
-        <Navbar />
+        <Header />
 
         <Switch>
           <Route exact path="/all" component={AllMoviesPage} />
