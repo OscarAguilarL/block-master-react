@@ -16,8 +16,16 @@ export const Header = () => {
         <img src={logo} alt="Logo" width="67" height="40" />
       </Link>
 
-      <button className="btn-hamburguer" onClick={toggle}>
-        <i className="icon-menu"></i>
+      <button
+        className={`hamburger hamburger--spin btn-hamburguer ${
+          toggleValue && 'is-active'
+        }`}
+        type="button"
+        onClick={toggle}
+      >
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
       </button>
 
       <nav className={`header-nav ${toggleValue && 'is-open'}`}>
