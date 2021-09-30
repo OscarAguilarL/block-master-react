@@ -6,12 +6,15 @@ import { LessValuedMoviesPage } from '../pages/LessValuedMoviesPage'
 import { MostValuedMoviesPage } from '../pages/MostValuedMoviesPage'
 import { Wrapper } from '../components/Wrapper'
 import { Header } from '../components/Header'
+import { Slider } from '../components/Slider'
 
 export const BlockMasterRouter = () => {
   return (
     <BrowserRouter>
       <Wrapper>
         <Header />
+
+        <Slider />
 
         <Switch>
           <Route exact path="/all" component={AllMoviesPage} />
