@@ -1,8 +1,10 @@
 import React from 'react'
 
+import '../assets/styles/Page.css'
+
 export const AllMoviesPage = () => {
   return (
-    <div style={{ border: '1px solid red', marginTop: '2.25rem'}}>
+    <div className="moviePage">
       <h1>All Movies</h1>
     </div>
   )
