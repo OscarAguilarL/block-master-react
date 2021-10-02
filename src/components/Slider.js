@@ -1,28 +1,26 @@
-import React, { useEffect, useState } from 'react'
-import { image_url } from '../utils/constants'
-import { getLatestMovies } from '../utils/getLatestMovies'
+import React from 'react'
+
+import { sliderImages } from '../utils/constants'
+
+import '../assets/styles/Slider.css'
+
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
 
 export const Slider = () => {
-  const [movies, setMovies] = useState([])
-  const [loading, setLoading] = useState(true)
-  const getData = async () => {
-    const resp = await getLatestMovies()
-    setMovies(resp.results.slice(0, 3))
-    setLoading(false)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
-
   return (
-    <div>
-      <h3>Slider</h3>
-
-      {!loading &&
-        movies.map((movie) => (
-          <img src={image_url + movie.poster_path} alt="" />
-        ))}
-    </div>
+    <Carousel
+      className="slider"
+      infiniteLoop={true}
+      showThumbs={false}
+      swipeable={true}
+      autoPlay={true}
+    >
+      {sliderImages.map((movie) => (
+        <div className="sliderImage" key={movie.id}>
+          <img src={movie.image} alt="" />
+        </div>
+      ))}
+    </Carousel>
   )
 }
