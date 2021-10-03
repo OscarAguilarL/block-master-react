@@ -8,6 +8,7 @@
   --grey: #a7a9be;
   --black: #000000;
   --background: #0f0e17;
+  --modalbBackground: rgba(15, 14, 23, 0.9);
   --headline2: 700 2.875rem/3.5rem var(--baseFont);
   --headline1: 700 3rem/3.625rem var(--baseFont);
   --headline3: 700 1.75rem / normal var(--baseFont);

@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { image_url } from '../utils/constants'
 
 import '../assets/styles/MovieGridItem.css'
+import { MovieModal } from './MovieModal'
 
 export const MovieGridItem = ({ movie }) => {
+  const [openModal, setOpenModal] = useState(false)
+
+  const handleOpenModal = () => {
+    setOpenModal(true)
+  }
+
+  const handleCloseModal = () => {
+    setOpenModal(false)
+  }
+
   return (
     <div className="movie">
-      <button type="button" className="movie-image">
+      <button type="button" className="movie-image" onClick={handleOpenModal}>
         <img src={image_url + movie.poster_path} alt={movie.original_title} />
       </button>
       <div
@@ -18,6 +29,8 @@ export const MovieGridItem = ({ movie }) => {
         <i className="icon-star"></i>
         <span>{movie.vote_average.toFixed(1)}</span>
       </div>
+
+      {openModal && <MovieModal onClose={handleCloseModal} movie={movie} />}
     </div>
   )
 }
