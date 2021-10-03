@@ -1,0 +1,52 @@
+
+.movie-image {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  background: none;
+  border: none;
+}
+
+.movie-image img {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+}
+
+.card-rating {
+  position: absolute;
+  top: 8%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 50px 50px 0;
+  font: var(--body2-bold);
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  padding-inline-end: 0.7rem;
+  padding-inline-start: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.border-primary {
+  border: 3px solid var(--primary);
+  border-inline-start: none;
+}
+
+.border-secondary {
+  border: 3px solid var(--secondary);
+  border-inline-start: none;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-image {
+    max-block-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  .card-rating {
+    font: var(--headline3);
+    padding-block-start: 1rem;
+    padding-block-end: 1rem;
+    padding-inline-end: 1.5rem;
+    padding-inline-start: 1.5rem;
+  }
+}

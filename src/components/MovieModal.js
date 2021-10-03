@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom'
 
 import '../assets/styles/MovieModal.css'
 
-export const MovieModal = ({ onClose, movie }) => {
+export const MovieModal = ({ onClickFn, movie }) => {
   console.log(movie)
 
   return ReactDOM.createPortal(
     <div className="modal">
-      <h1 onClick={onClose}>movieModal</h1>
+      <button type="button" onClick={() => onClickFn()}>
+        movieModal
+      </button>
     </div>,
     document.querySelector('#modal')
   )
