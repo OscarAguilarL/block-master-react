@@ -16,7 +16,7 @@ export const MovieGridItem = ({ movie }) => {
         }`}
       >
         <i className="icon-star"></i>
-        <span>{movie.vote_average}</span>
+        <span>{Math.floor(movie.vote_average)}</span>
       </div>
     </div>
   )
