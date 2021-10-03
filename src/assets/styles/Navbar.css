@@ -2,7 +2,7 @@
   padding-block-start: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
 }
 
 .header-logo {

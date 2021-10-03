@@ -1,0 +1,21 @@
+.movie-image {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-image img {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-image {
+    max-block-size: 100%;
+    max-inline-size: 100%;
+  }
+}

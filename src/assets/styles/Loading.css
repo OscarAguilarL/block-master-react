@@ -1,0 +1,17 @@
+.spinner-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-loader img {
+  inline-size: 45px;
+  block-size: 45px;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
