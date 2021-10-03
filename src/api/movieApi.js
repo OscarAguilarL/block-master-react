@@ -5,5 +5,6 @@ export const movieApi = axios.create({
   baseURL: url,
   params: {
     api_key,
+    'language': 'es'
   },
 })
