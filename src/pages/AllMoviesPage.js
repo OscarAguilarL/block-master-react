@@ -24,7 +24,7 @@ export const AllMoviesPage = () => {
 
   return (
     <div className="moviePage">
-      <h1>All Movies</h1>
+      <h1>Todas las peliculas</h1>
       {loading ? <Loading /> : <MovieGrid movies={movies} />}
     </div>
   )

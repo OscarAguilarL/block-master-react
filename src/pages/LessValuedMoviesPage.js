@@ -5,7 +5,7 @@ import '../assets/styles/Page.css'
 export const LessValuedMoviesPage = () => {
   return (
     <div className="moviePage">
-      <h1>LessValuedMovies</h1>
+      <h1>Peliculas menos valoradas</h1>
     </div>
   )
 }
