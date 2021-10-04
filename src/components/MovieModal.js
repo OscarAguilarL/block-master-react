@@ -1,31 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { MoviePoster } from '../components/MoviePoster'
 
 import '../assets/styles/MovieModal.css'
-import { getGenres } from '../utils/getGenres'
 import { Button } from './Button'
+import { useGetGenres } from '../hooks/useGetGenres'
 
 export const MovieModal = ({ onClickFn, movie }) => {
-  // const [movieGender, setMovieGender] = useState([])
-  const [genres, setGenres] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  const getData = async () => {
-    const resp = await getGenres()
-    setGenres(resp.genres)
-    setLoading(false)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [movie])
-
-  if (!loading) {
-    console.log(genres)
-    console.log(movie)
-  }
+  const { genres, loading } = useGetGenres(movie.genre_ids)
 
   return ReactDOM.createPortal(
     <div className="modal animate__animated animate__fadeIn animate__faster">
@@ -42,7 +25,8 @@ export const MovieModal = ({ onClickFn, movie }) => {
           <h3>{movie.title}</h3>
           <p>{movie.overview}</p>
           <p className="caption">
-            Crimen/Suspenso
+            {!loading && <span>{genres}</span>}
+
             <span className="separator"></span>
             {movie.release_date.slice(0, 4)}
           </p>
