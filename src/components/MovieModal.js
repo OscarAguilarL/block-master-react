@@ -5,6 +5,7 @@ import { MoviePoster } from '../components/MoviePoster'
 
 import '../assets/styles/MovieModal.css'
 import { getGenres } from '../utils/getGenres'
+import { Button } from './Button'
 
 export const MovieModal = ({ onClickFn, movie }) => {
   // const [movieGender, setMovieGender] = useState([])
@@ -43,15 +44,9 @@ export const MovieModal = ({ onClickFn, movie }) => {
             <span className="separator"></span>
             {movie.release_date.slice(0, 4)}
           </p>
-          <div className="buttons">
-            <button className="btn btn-primary">
-              <i className="icon-plus"></i>
-              <span>Ver después</span>
-            </button>
-            <button className="btn btn-secondary">
-              <i className="icon-play"></i>
-              <span>Ver ahora</span>
-            </button>
+          <div className="modalButtons">
+            <Button text="Ver después" iconType="plus" type="primary" />
+            <Button text="Ver ahora" iconType="play" type="secondary" />
           </div>
         </div>
       </div>

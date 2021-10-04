@@ -69,6 +69,16 @@
   background-color: var(--grey);
 }
 
+.modalButtons {
+  padding-block-start: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 1rem;
+
+}
+
 @media screen and (min-width: 768px) {
   .modal-content {
     flex-direction: row;
@@ -91,5 +101,9 @@
 
   .modal-description > p {
     font: var(--body1-regular);
+  }
+
+  .modalButtons {
+    flex-direction: row;
   }
 }
