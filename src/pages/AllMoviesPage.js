@@ -18,10 +18,6 @@ export const AllMoviesPage = () => {
     getData()
   }, [])
 
-  if (!loading) {
-    console.log(movies)
-  }
-
   return (
     <div className="moviePage">
       <h1>Todas las peliculas</h1>
