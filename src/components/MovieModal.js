@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 
 import { MoviePoster } from '../components/MoviePoster'
 
 import '../assets/styles/MovieModal.css'
+import { getGenres } from '../utils/getGenres'
 
 export const MovieModal = ({ onClickFn, movie }) => {
-  console.log(movie)
+  // const [movieGender, setMovieGender] = useState([])
+  const [genres, setGenres] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  const getData = async () => {
+    const resp = await getGenres()
+    setGenres(resp.genres)
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [movie])
+
+  if (!loading) {
+    console.log(genres)
+    console.log(movie)
+  }
 
   return ReactDOM.createPortal(
     <div className="modal">
