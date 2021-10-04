@@ -13,13 +13,14 @@ export const MovieSearchPage = () => {
   const location = useLocation()
   const { q = '' } = queryString.parse(location.search)
 
-  const getData = async () => {
-    const resp = await getMovieSearch(encodeURI(q))
-    setSearchResp(resp.results)
-    setLoading(false)
-  }
-
-  useEffect(() => getData(), [])
+  useEffect(() => {
+    const getData = async () => {
+      const resp = await getMovieSearch(encodeURI(q))
+      setSearchResp(resp.results)
+      setLoading(false)
+    }
+    getData()
+  }, [q])
 
   return (
     <div className="moviePage">
