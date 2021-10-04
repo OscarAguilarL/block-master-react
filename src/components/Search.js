@@ -5,13 +5,14 @@ import '../assets/styles/Search.css'
 import { useForm } from '../hooks/useForm'
 
 const Search = ({ history }) => {
-  const [{ searchTerm }, handleInputChange] = useForm({
+  const [{ searchTerm }, handleInputChange, reset] = useForm({
     searchTerm: '',
   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
     history.push(`/search?q=${encodeURI(searchTerm)}`)
+    reset()
   }
 
   return (

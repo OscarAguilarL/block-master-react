@@ -28,5 +28,6 @@
     color: var(--black);
     font-size: 1.25rem;
     background-color: var(--primary);
+    cursor: pointer;
   }
 }
