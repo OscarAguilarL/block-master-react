@@ -33,8 +33,10 @@ export const MovieModal = ({ onClickFn, movie }) => {
         <i className="icon-plus"></i>
       </button>
       <div className="modal-content">
-        <div className="modal-poster animate__animated animate__slideInLeft animate__faster">
-          <MoviePoster movie={movie} />
+        <div className="animate__animated animate__slideInLeft animate__faster">
+          <div className="modal-poster">
+            <MoviePoster movie={movie} />
+          </div>
         </div>
         <div className="modal-description animate__animated animate__slideInRight animate__faster">
           <h3>{movie.title}</h3>
