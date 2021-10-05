@@ -28,7 +28,7 @@ export const MovieModal = ({ onClickFn, movie }) => {
             {!loading && <span>{genres}</span>}
 
             <span className="separator"></span>
-            {movie.release_date.slice(0, 4)}
+            {movie.release_date && movie.release_date.slice(0, 4)}
           </p>
           <div className="modalButtons">
             <Button text="Ver después" iconType="plus" type="primary" />
