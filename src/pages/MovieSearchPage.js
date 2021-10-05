@@ -29,7 +29,7 @@ export const MovieSearchPage = () => {
       {searchResp.length === 0 ? (
         <h1>No se encontraron resultados para: "{decodeURI(q)}"</h1>
       ) : (
-        <h1>Resultados de búsqueda</h1>
+        <h1>Resultados de la búsqueda: "{decodeURI(q)}"</h1>
       )}
       {loading ? (
         <Loading />
