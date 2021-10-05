@@ -1,6 +1,6 @@
-import mulan from '../assets/img/mulan.png'
-import raya from '../assets/img/raya.png'
-import unidos from '../assets/img/unidos.png'
+import mulan from '../assets/img/mulan.webp'
+import raya from '../assets/img/raya.webp'
+import unidos from '../assets/img/unidos.webp'
 
 const url = 'https://api.themoviedb.org/3'
 const api_key = '26226bc0d351dd2e356a4f74d1f1d276'
