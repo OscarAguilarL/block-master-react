@@ -10,7 +10,7 @@
 }
 
 .searchPage h1 {
-  justify-self: flex-start;
+  align-self: start;
 }
 
 .imgContainer {

@@ -31,12 +31,14 @@ export const MovieSearchPage = () => {
       ) : (
         <h1>Resultados de búsqueda</h1>
       )}
-      {loading ? <Loading /> : <MovieGrid movies={searchResp} />}
-
-      {searchResp.length === 0 && (
+      {loading ? (
+        <Loading />
+      ) : searchResp.length === 0 ? (
         <div className="imgContainer">
           <img src={noSearchFound} alt="Search not found" />
         </div>
+      ) : (
+        <MovieGrid movies={searchResp} />
       )}
     </div>
   )
